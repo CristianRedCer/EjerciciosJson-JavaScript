@@ -1,3 +1,8 @@
 {
-    
+    "nota":{
+        "para": "Pedro",
+        "de": "Laura",
+        "titulo": "Recordatorio",
+        "contenido2": "A las 7:00pm en la puerta del teatro"
+    }
 }
