@@ -1,26 +1,26 @@
-{
-  "matricula": [
-    {
-      "personal": {
-        "documento": "99223366M",
-        "nombre": "Juan Pardo Martín",
-        "titulacion": "Ingeniería Informática",
-        "curso": "1997/1998",
-        "domicilios": [
-          {
-            "domicilio": {
-              "nombre": "C/ Principal no1"
-            }
-          },
-          {
-            "domicilio": {
-              "nombre": "C/ Secundaria no2"
-            }
+[
+  {
+    "personal": {
+      "documento": "99223366M",
+      "nombre": "Juan Pardo Martín",
+      "titulacion": "Ingeniería Informática",
+      "curso": "1997/1998",
+      "domicilios": [
+        {
+          "domicilio": {
+            "nombre": "C/ Principal no1"
           }
-        ]
-      }
-    },
-    {"pagos": [
+        },
+        {
+          "domicilio": {
+            "nombre": "C/ Secundaria no2"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "pagos": [
       {
         "pago": {
           "tipo_matricula": "Pago fraccionado 1"
@@ -31,6 +31,6 @@
           "tipo_matricula": "Pago fraccionado 2"
         }
       }
-    ]}
-  ]
-}
+    ]
+  }
+]
