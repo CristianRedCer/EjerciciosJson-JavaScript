@@ -1,26 +1,26 @@
 [
   {
     "modelo": "Dell XPS 15",
-    "precio": "$1,800 USD",
+    "precio": { "moneda": "USD", "cantidad": 1800 },
     "Procesador": "Intel Core 17-12700H",
-    "Componentes": "16GB RAM, 512GB SSD, NVIDIA RTX 3050"
+    "Componentes": ["16GB RAM", "512GB SSD", "NVIDIA RTX 3050"]
   },
   {
     "modelo": "MacBook Pro 14\"",
-    "precio": "$2,000 USD",
+    "precio": { "moneda": "USD", "cantidad": 2000 },
     "Procesador": "Apple M2 Pro",
-    "Componentes": "16GB, 1TB SSD, Retina Display"
+    "Componentes": ["16GB RAM", "1TB SSD", "Retina Display"]
   },
   {
     "modelo": "Asus ROG Strix G15",
-    "precio": "$1,600 USD",
+    "precio": { "moneda": "USD", "cantidad": 1600 },
     "Procesador": "AMD Ryzen 9 6900HX",
-    "Componentes": "32GB RAM, 1TB SSD, Nvidia RTX 3070"
+    "Componentes": ["32GB RAM", "1TB SSD", "Nvidia RTX 3070"]
   },
   {
     "modelo": "HP Pavilion 15",
-    "precio": "$900 USD",
+    "precio": { "moneda": "USD", "cantidad": 900 },
     "Procesador": "Intel Core i5-1249P",
-    "Componentes": "8GB RAM, 256GB SSD, Intel Iris Xe"
+    "Componentes": ["8GB RAM", "256GB SSD", "Intel Iris Xe"]
   }
 ]
