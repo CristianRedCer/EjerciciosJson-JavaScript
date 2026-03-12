@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Ejercicio 3 – Tabla dinámica</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=Inconsolata:wght@300;400;500&display=swap');
+
+    :root {
+      --bg: #f0ede8;
+      --ink: #1c1a17;
+      --accent: #d4401a;
+      --line: #1c1a17;
+      --row-alt: #e4e0da;
+      --header-bg: #1c1a17;
+      --header-fg: #f0ede8;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      min-height: 100vh;
+      background: var(--bg);
+      font-family: 'Inconsolata', monospace;
+      color: var(--ink);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      padding: 4rem 2rem;
+      gap: 3rem;
+    }
+
+    header {
+      text-align: center;
+    }
+
+    .kicker {
+      font-size: 0.65rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 0.5rem;
+    }
+
+    h1 {
+      font-family: 'Syne', sans-serif;
+      font-weight: 800;
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      line-height: 1;
+      letter-spacing: -0.02em;
+    }
+
+    h1 span { color: var(--accent); }
+
+    button {
+      font-family: 'Syne', sans-serif;
+      font-weight: 700;
+      font-size: 0.85rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 0.9rem 2.5rem;
+      background: var(--ink);
+      color: var(--bg);
+      border: 2px solid var(--ink);
+      cursor: pointer;
+      transition: background 0.2s, color 0.2s;
+      outline: none;
+    }
+
+    button:hover {
+      background: var(--accent);
+      border-color: var(--accent);
+    }
+
+    button:active { transform: scale(0.97); }
+
+    #tabla-container {
+      width: 100%;
+      max-width: 620px;
+    }
+
+    /* Estilos que aplicará JS directamente a la tabla generada */
+    /* (definidos como clases para que JS las asigne) */
+
+    .tabla-notas {
+      width: 100%;
+      border-collapse: collapse;
+      border: 2px solid var(--line);
+      font-family: 'Inconsolata', monospace;
+      font-size: 0.95rem;
+      animation: fadeIn 0.4s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(12px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    .tabla-notas th {
+      background: var(--header-bg);
+      color: var(--header-fg);
+      font-family: 'Syne', sans-serif;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      font-size: 0.75rem;
+      padding: 0.85rem 1.25rem;
+      border: 2px solid var(--line);
+      text-align: left;
+    }
+
+    .tabla-notas td {
+      padding: 0.75rem 1.25rem;
+      border: 2px solid var(--line);
+      color: var(--ink);
+    }
+
+    .tabla-notas tr:nth-child(even) td {
+      background: var(--row-alt);
+    }
+
+    .tabla-notas tr:hover td {
+      background: #ffd6cb;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <p class="kicker">ejercicio_03.html</p>
+    <h1>Tabla de <span>Notas</span></h1>
+  </header>
+
+  <button onclick="generarTabla()">Generar tabla</button>
+
+  <div id="tabla-container"></div>
+
+  <script>
+    const datos = [
+      { alumno: "Ana",   n1: 7,  n2: 9 },
+      { alumno: "Luis",  n1: 8,  n2: 6 },
+      { alumno: "Marta", n1: 10, n2: 9 }
+    ];
+
+    const columnas = ["Alumno", "Nota 1", "Nota 2"];
+    const claves   = ["alumno", "n1", "n2"];
+
+    function generarTabla() {
+      // Limpiar tabla anterior si existe
+      const contenedor = document.querySelector('#tabla-container');
+      contenedor.innerHTML = '';
+
+      // Crear <table>
+      const tabla = document.createElement('table');
+      tabla.className = 'tabla-notas';
+
+      // ── Cabecera ──────────────────────────────────────────
+      const thead = document.createElement('thead');
+      const trHead = document.createElement('tr');
+
+      for (let i = 0; i < columnas.length; i++) {
+        const th = document.createElement('th');
+        th.appendChild(document.createTextNode(columnas[i]));
+        trHead.appendChild(th);
+      }
+
+      thead.appendChild(trHead);
+      tabla.appendChild(thead);
+
+      // ── Cuerpo: bucles for anidados ───────────────────────
+      const tbody = document.createElement('tbody');
+
+      for (let f = 0; f < datos.length; f++) {          // bucle filas
+        const tr = document.createElement('tr');
+
+        for (let c = 0; c < claves.length; c++) {        // bucle celdas
+          const td = document.createElement('td');
+          const texto = document.createTextNode(datos[f][claves[c]]);
+          td.appendChild(texto);
+          tr.appendChild(td);
+        }
+
+        tbody.appendChild(tr);
+      }
+
+      tabla.appendChild(tbody);
+
+      // Insertar <table> en el body (dentro del contenedor)
+      document.body.appendChild(tabla);          // ← inserción directa en body
+      contenedor.appendChild(tabla);             // se mueve al contenedor visual
+    }
+  </script>
+
+</body>
+</html>
