@@ -1,61 +1,26 @@
 {
   "nombre": "Residencial Sol",
-  "direccion": "Calle de la Luz 123",
-  "codigo_Postal": "28080",
+  "direccion": {
+    "calle": "Calle de la Luz",
+    "numero": 123,
+    "codigo_Postal": "28080"
+  },
+
   "pisos": [
     {
-      "numero_Piso": 1,
-      "puerta": "D",
-      "estancias": [
-        {
-          "tipo": "salon"
-        },
-        {
-          "tipo": "baño"
-        },
-        {
-          "tipo": "dormitorio principal"
-        },
-        {
-          "tipo": "oficina"
-        }
-      ]
+      "numero_Piso": 3,
+      "puerta": "B",
+      "estancias": ["salon", "cocina", "baño", "dormitorio"]
     },
     {
       "numero_Piso": 2,
       "puerta": "A",
-      "estancias": [
-        {
-          "tipo": "salon"
-        },
-        {
-          "tipo": "cocina"
-        },
-        {
-          "tipo": "baño"
-        },
-        {
-          "tipo": "Habitación infantil"
-        }
-      ]
+      "estancias": ["salon", "cocina", "baño", "Habitación infantil"]
     },
     {
-      "numero_Piso": 3,
-      "puerta": "B",
-      "estancias": [
-        {
-          "tipo": "salon"
-        },
-        {
-          "tipo": "cocina"
-        },
-        {
-          "tipo": "baño"
-        },
-        {
-          "tipo": "dormitorio"
-        }
-      ]
+      "numero_Piso": 1,
+      "puerta": "D",
+      "estancias": ["salon", "baño", "dormitorio principal", "oficina"]
     }
   ]
 }
