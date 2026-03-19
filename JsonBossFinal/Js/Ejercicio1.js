@@ -2,7 +2,7 @@
 const principal = document.querySelector("#mensajes");
 
 // Ruta del archivo JSON local
-const requestURL = "../JSON/datos.json";
+const requestURL = "../json/datos.json";
 
 // Cargar el JSON con fetch()
 async function cargarJSON() {
