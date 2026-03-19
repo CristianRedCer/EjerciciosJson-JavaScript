@@ -1,0 +1,22 @@
+[
+  {
+    "nombre": "Pokemon Let's go Pikachu",
+    "estudio": "Game Freak",
+    "fecha_lanzamiento": "2018-11-16",
+    "plataformas": ["pc", "switch","movil"],
+    "valoraciones": [
+      { "Gamer": "Crc2212", "Jugabilidad": 9, "Diseño": 7.5, "Historia": 7 },
+      { "Gamer": "Alexios808", "Jugabilidad": 8.5, "Diseño": 8, "Historia": 7 }
+    ]
+  },
+  {
+    "nombre": "Pokemon Purpura",
+    "estudio": "Game Freak",
+    "fecha_lanzamiento": "2022-11-18",
+    "plataformas": ["pc", "switch","movil"],
+    "valoraciones": [
+      { "Gamer": "Crc2212", "Jugabilidad": 9.5, "Diseño": 9.5, "Historia": 10 },
+      { "Gamer": "Alexios808", "Jugabilidad": 8, "Diseño": 9, "Historia": 7 }
+    ]
+  }
+]

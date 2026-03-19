@@ -15,17 +15,17 @@ async function cargarJSON() {
 
 cargarJSON();
 
-function generaMensaje(datosMensaje) {
-  for (let i = 0; i < datosMensaje.length; i++) {
-    console.log(datosMensaje);
-
+function generaMensaje(ListaMensajes) {
+  
+  for (let i = 0; i < ListaMensajes.length; i++) {
+    console.log(ListaMensajes[i]);
     const section_agrupador = document.createElement("section");
     const div_personas = document.createElement("div");
     const h3_para = document.createElement("h3");
     const h3_de = document.createElement("h3");
 
-    const texto_para = document.createTextNode("Para: " + datosMensaje[i].para);
-    const texto_de = document.createTextNode("De: " + datosMensaje[i].de);
+    const texto_para = document.createTextNode("Para: " + ListaMensajes[i].para);
+    const texto_de = document.createTextNode("De: " + ListaMensajes[i].de);
 
     h3_para.append(texto_para);
     h3_de.append(texto_de);
@@ -36,8 +36,8 @@ function generaMensaje(datosMensaje) {
     const p_titulo = document.createElement("p");
     const p_contenido = document.createElement("p");
 
-    const texto_titulo = document.createTextNode(datosMensaje[i].titulo);
-    const texto_contenido = document.createTextNode(datosMensaje[i].contenido);
+    const texto_titulo = document.createTextNode(ListaMensajes[i].titulo);
+    const texto_contenido = document.createTextNode(ListaMensajes[i].contenido);
 
     p_titulo.append(texto_titulo);
     p_contenido.append(texto_contenido);

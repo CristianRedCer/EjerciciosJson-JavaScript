@@ -1,6 +1,5 @@
 body {
   background-color: rgb(230, 181, 116);
-   box-sizing: border-box;
 }
 
 #mensajes {
@@ -52,7 +51,6 @@ p {
   background-color: rgb(186, 113, 24);
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   margin: auto;
-  width: 75%;
-  padding: 4% 1%;
-  max-height: 40%;
+  width: 50%;
+  padding: 5%;
 }
