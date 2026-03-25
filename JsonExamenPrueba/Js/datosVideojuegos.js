@@ -75,7 +75,7 @@ function generaListaJuegos(videojuegos) {
     const VideojuegoFoto = document.createElement("img");
     VideojuegoFoto.setAttribute("src", videojuegos[i].foto);
     VideojuegoFoto.setAttribute("class", "foto-videojuego");
-    videojuegoSection.append(VideojuegoFoto);
+    VideojuegoArticle.append(VideojuegoFoto);
     videojuegoSection.append(VideojuegoArticle);
     principal.append(videojuegoSection);
   }
