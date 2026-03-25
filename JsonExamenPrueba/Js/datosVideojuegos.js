@@ -15,6 +15,7 @@ cargarJSON();
 
 function generaCatalogo(datosDejuegos) {
   for (let i = 0; i < datosDejuegos.length; i++) {
+    console.log(datosDejuegos[i]);
     
   }
 }
