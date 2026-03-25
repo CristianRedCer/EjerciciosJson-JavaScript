@@ -108,3 +108,8 @@ div.valoracion p {
   text-align: left;
   margin: 0;
 }
+.foto-videojuego {
+  max-width: 500px;
+  border-radius: 6px;
+  margin: 0 auto;
+}

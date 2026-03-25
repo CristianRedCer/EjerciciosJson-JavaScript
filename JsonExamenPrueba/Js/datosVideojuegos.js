@@ -16,14 +16,23 @@ cargarJSON();
 
 function generaListaJuegos(videojuegos) {
   for (let i = 0; i < videojuegos.length; i++) {
+    console.log(videojuegos[i]);
     const videojuegoSection = document.createElement("section");
     const VideojuegoNombre = document.createElement("h3");
     const VideojuegoEstudio = document.createElement("h3");
     const VideojuegoAnyio = document.createElement("h3");
     VideojuegoNombre.append(document.createTextNode(videojuegos[i].nombre));
-    VideojuegoEstudio.append(document.createTextNode(videojuegos[i].estudio));
-    VideojuegoAnyio.append(document.createTextNode(videojuegos[i].fecha_lanzamiento));
-    videojuegoSection.append(VideojuegoNombre, VideojuegoEstudio, VideojuegoAnyio);
+    VideojuegoEstudio.append(
+      document.createTextNode(videojuegos[i]["estudio"]),
+    );
+    VideojuegoAnyio.append(
+      document.createTextNode(videojuegos[i]["fecha_lanzamiento"]),
+    );
+    videojuegoSection.append(
+      VideojuegoNombre,
+      VideojuegoEstudio,
+      VideojuegoAnyio,
+    );
     const VideojuegoPlataformasDiv = document.createElement("div");
     VideojuegoPlataformasDiv.setAttribute("id", "plataformas");
     for (let j = 0; j < videojuegos[i].plataformas.length; j++) {
@@ -40,15 +49,33 @@ function generaListaJuegos(videojuegos) {
       const divJugabilidad = document.createElement("div");
       const divDiseño = document.createElement("div");
       const divHistoria = document.createElement("div");
-      divGamer.append(document.createTextNode("Gamer: " + videojuegos[i].valoraciones[k].Gamer));
-      divJugabilidad.append(document.createTextNode("Jugabilidad: " + videojuegos[i].valoraciones[k].Jugabilidad));
-      divDiseño.append(document.createTextNode("Diseño: " + videojuegos[i].valoraciones[k].Diseño));
-      divHistoria.append(document.createTextNode("Historia: " + videojuegos[i].valoraciones[k].Historia));
+      divGamer.append(
+        document.createTextNode(
+          "Gamer: " + videojuegos[i].valoraciones[k].Gamer,
+        ),
+      );
+      divJugabilidad.append(
+        document.createTextNode(
+          "Jugabilidad: " + videojuegos[i].valoraciones[k].Jugabilidad,
+        ),
+      );
+      divDiseño.append(
+        document.createTextNode(
+          "Diseño: " + videojuegos[i].valoraciones[k].Diseño,
+        ),
+      );
+      divHistoria.append(
+        document.createTextNode(
+          "Historia: " + videojuegos[i].valoraciones[k].Historia,
+        ),
+      );
       divValoracion.append(divGamer, divJugabilidad, divDiseño, divHistoria);
       VideojuegoArticle.append(divValoracion);
     }
-
-    videojuegoSection.append(VideojuegoArticle);
+    const VideojuegoFoto = document.createElement("img");
+    VideojuegoFoto.setAttribute("src", videojuegos[i].foto);
+    VideojuegoFoto.setAttribute("class", "foto-videojuego");
+    videojuegoSection.append(VideojuegoFoto);
     principal.append(videojuegoSection);
   }
 }
