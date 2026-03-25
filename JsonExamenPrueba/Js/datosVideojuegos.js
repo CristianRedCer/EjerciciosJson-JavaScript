@@ -77,7 +77,6 @@ function generaListaJuegos(videojuegos) {
     VideojuegoFoto.setAttribute("class", "foto-videojuego");
     videojuegoSection.append(VideojuegoFoto);
     videojuegoSection.append(VideojuegoArticle);
-    videojuegoSection.append(VideojuegoArticle);
     principal.append(videojuegoSection);
   }
 }
