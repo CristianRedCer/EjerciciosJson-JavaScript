@@ -14,12 +14,6 @@ async function cargarJSON() {
 
 cargarJSON();
 
-<<<<<<< HEAD
-function generaCatalogo(datosDejuegos) {
-  for (let i = 0; i < datosDejuegos.length; i++) {
-    console.log(datosDejuegos[i]);
-    
-=======
 function generaListaJuegos(videojuegos) {
   for (let i = 0; i < videojuegos.length; i++) {
     const videojuegoSection = document.createElement("section");
@@ -56,6 +50,5 @@ function generaListaJuegos(videojuegos) {
 
     videojuegoSection.append(VideojuegoArticle);
     principal.append(videojuegoSection);
->>>>>>> b5d75ed207b71362790945e20616687abbd6be5d
   }
 }
