@@ -1,0 +1,29 @@
+{
+  "nombre": "Excursiones CRC",
+  "informacion": {
+    "telefono": "675727536",
+    "email": "credcer2212@g.educaand.es"
+  },
+  "excursiones": [
+    {
+      "destino": "Paris",
+      "pais": "Francia",
+      "precio": "1000 euros",
+      "actividades": [
+        "visita a la Torre Eiffel",
+        "Museo del Louvre",
+        "paseo por el río Sena"
+      ]
+    },
+    {
+      "destino": "Buenos Aires",
+      "pais": "Argentina",
+      "precio": "1500 euros",
+      "actividades": [
+        "Visita al Obelisco",
+        "visita campo River Plate",
+        "Visita a la Bombonera"
+      ]
+    }
+  ]
+}
