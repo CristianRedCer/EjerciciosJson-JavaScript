@@ -1,0 +1,46 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Ejercicio1 Json Schema Profesor DAM",
+  "description": "Este es el primer ejercicior en el curso de DAM",
+  "type": "object",
+  "properties": {
+    "marca": {
+      "type": "string",
+      "description": "Marca del vehículo"
+    },
+    "modelo": {
+      "type": "string",
+      "description": "Modelo del vehículo"
+    },
+    "diesel": {
+      "type": "boolean",
+      "description": "Si el vehículo tiene motor diesel"
+    },
+    "gasolina": {
+      "type": "boolean",
+      "description": "Si el vehículo tiene motor gasolina"
+    },
+    "hibrido": {
+      "type": "boolean",
+      "description": "Si el vehículo tiene motor gasolina y diesel"
+    },
+    "puntuacionesClientes": {
+      "type": "array",
+      "description": "Puntuaciones de los clientes",
+      "items": {
+        "type": "number",
+        "description": "Puntuación del cliente",
+        "minimum": 0,
+        "maximum": 10,
+        "uniqueItems": false
+      },
+      "minItems": 3,
+      "maxItems": 5,
+      "uniqueItems": false
+    }
+  },
+  "required": ["marca", "modelo", "puntuacionesClientes"],
+  "additionalProperties": {
+    "^\\$":{}
+  }
+}

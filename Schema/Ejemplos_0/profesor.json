@@ -1,0 +1,7 @@
+{
+    "$schema": "profesor-schema.json",
+    "nombre": "Juanan",
+    "edad": 27,
+    "departamento": "Informática",
+    "asignaturas": ["LMS", "AWS", "SOST"]
+}
