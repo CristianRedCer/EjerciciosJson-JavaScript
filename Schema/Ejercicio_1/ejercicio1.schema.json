@@ -1,7 +1,7 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "title": "Ejercicio1 Json Schema Profesor DAM",
-  "description": "Este es el primer ejercicior en el curso de DAM",
+  "description": "Este es el primer ejercicio en el curso de DAM",
   "type": "object",
   "properties": {
     "marca": {

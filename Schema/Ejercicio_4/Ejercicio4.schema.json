@@ -1,0 +1,108 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Ejercicio4 Json Schema Profesor DAM",
+  "description": "Este es el cuarto ejercicio en el curso de DAM",
+  "type": "object",
+  "informacion_general": {
+    "type": "object",
+    "description": "Esquema para validar la información de un pedido",
+    "properties": {
+      "idPedido": {
+        "type": "string",
+        "description": "Identificador único del pedido",
+        "maxLength": 7
+      },
+      "fecha": {
+        "type": "string",
+        "format": "date-time",
+        "description": "Fecha del pedido"
+      },
+      "cliente": {
+        "type": "object",
+        "properties": {
+          "idCliente": {
+            "type": "string",
+            "description": "Identificador único del cliente"
+          },
+          "nombre": {
+            "type": "string",
+            "description": "Nombre del cliente"
+          },
+          "email": {
+            "type": "string",
+            "format": "email",
+            "description": "Correo electrónico del cliente"
+          },
+          "direccion": {
+            "type": "object",
+            "description": "Dirección del cliente",
+            "properties": {
+              "calle": {
+                "type": "string",
+                "description": "Nombre de la calle"
+              },
+              "ciudad": {
+                "type": "string",
+                "description": "Ciudad"
+              },
+              "codigo_postal": {
+                "type": "string",
+                "description": "Código postal"
+              },
+              "pais": {
+                "type": "string",
+                "description": "País"
+              }
+            },
+            "additionalProperties": false
+          }
+        },
+        "required": ["idCliente", "nombre", "email", "direccion"],
+        "additionalProperties": false,
+        "productos": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "idProducto": {
+                "type": "string",
+                "description": "Identificador único del producto"
+              },
+              "nombre": {
+                "type": "string",
+                "description": "Nombre del producto"
+              },
+              "cantidad": {
+                "type": "integer",
+                "description": "Cantidad del producto en el pedido",
+                "minimum": 1
+              },
+              "precio_unitario": {
+                "type": "number",
+                "description": "Precio unitario del producto",
+                "minimum": 0
+              }
+            },
+            "required": ["idProducto", "nombre", "cantidad", "precio_unitario"],
+            "additionalProperties": false
+          }
+        },
+        "estado_pedido": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "total_pedido": {
+          "type": "number",
+          "minimum": 0
+        }
+      }
+    },
+    "required": ["idPedido","fecha","cliente","productos","estado_pedido",
+        "total_pedido"],
+    "additionalProperties": {
+      "^\\$": {}
+    }
+  }
+}

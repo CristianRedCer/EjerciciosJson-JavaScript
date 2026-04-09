@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Ejercicio2 Json Schema Profesor DAM",
+  "description": "Este es el segundo ejercicio en el curso de DAM",
+  "type": "object",
+  "properties": {
+    "mueble": {
+      "type": "string",
+      "description": "Tipo de mueble"
+    },
+    "tipoMadera": {
+      "type": "string",
+      "description": "Tipo de madera"
+    },
+    "medidas": {
+      "type": "object",
+      "properties": {
+        "ancho_cm": {
+          "type": "number",
+          "description": "Ancho del mueble en centímetros"
+        },
+        "alto_cm": {
+          "type": "number",
+          "description": "Alto del mueble en centímetros"
+        },
+        "profundidad_cm": {
+          "type": "number",
+          "description": "Profundidad del mueble en centímetros"
+        }
+      },
+      "required": ["ancho_cm", "alto_cm", "profundidad_cm"],
+      "additionalProperties": false
+    }
+  },
+  "required": ["mueble", "tipoMadera", "medidas"],
+  "additionalProperties": {
+    "^\\$": {}
+  }
+}

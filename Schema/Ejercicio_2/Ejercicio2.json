@@ -1,0 +1,10 @@
+{
+  "$schema": "Ejercicio2.schema.json",
+  "mueble": "sinfonier",
+  "tipoMadera": "caoba",
+  "medidas": {
+    "ancho_cm": 20,
+    "alto_cm": 10,
+    "profundidad_cm": 12
+  }
+}

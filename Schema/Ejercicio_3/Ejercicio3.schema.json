@@ -1,0 +1,67 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Ejercicio3 Json Schema Profesor DAM",
+  "description": "Este es el tercer ejercicio en el curso de DAM",
+  "type": "object",
+  "properties": {
+    "mueble": {
+      "type": "string",
+      "description": "Tipo de mueble"
+    },
+    "tipoMadera": {
+      "type": "string",
+      "description": "Tipo de madera"
+    },
+    "medidas": {
+      "type": "object",
+      "description": "medidas del mueble",
+      "properties": {
+        "ancho": {
+          "type": "object",
+          "description": "Ancho del mueble",
+          "properties": {
+            "numero": {
+              "type": "number"
+            },
+            "unidad": {
+              "type": "string"
+            }
+          },
+          "required": ["numero", "unidad"]
+        },
+        "alto": {
+          "type": "object",
+          "description": "Alto del mueble en centímetros",
+          "properties": {
+            "numero": {
+              "type": "number"
+            },
+            "unidad": {
+              "type": "string"
+            }
+          },
+          "required": ["numero", "unidad"]
+        },
+        "profundidad": {
+          "type": "object",
+          "description": "Profundidad del mueble en centímetros",
+          "properties": {
+            "numero": {
+              "type": "number"
+            },
+            "unidad": {
+              "type": "string"
+            }
+          },
+          "required": ["numero", "unidad"]
+        }
+      },
+      "required": ["ancho", "alto", "profundidad"],
+      "additionalProperties": false
+    }
+  },
+  "required": ["mueble", "tipoMadera", "medidas"],
+  "additionalProperties": {
+    "^\\$": {}
+  }
+}

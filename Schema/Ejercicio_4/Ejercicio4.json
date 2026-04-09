@@ -1,0 +1,40 @@
+{
+    "$schema": "Ejercicio4.schema.json",
+    "informacion_general":{
+        "idPedido": "0000001",
+        "fecha": "2026-04-09T18:00:00Z",
+        "cliente": {
+            "idCliente": "987654321",
+            "nombre": "Juan",
+            "telefono": "+34 34567890",
+            "email": "creds@ejemplo.com",
+            "direccion":{
+                "calle": "Calle Falsa 123",
+                "ciudad": "Málaga",
+                "codigo_postal": "29006",
+                "pais": "España"
+            } 
+        },
+        "productos": [
+            {
+                "idProducto": "A001",
+                "nombre": "Mueble de madera",
+                "cantidad": 1,
+                "precio_unitario": 299.99
+            },
+            {
+                "idProducto": "B002",
+                "nombre": "Silla de madera",
+                "cantidad": 4,
+                "precio_unitario": 49.99
+            }
+        ],
+        "estado_pedido":[
+            "En preparación",
+            "Enviado",
+            "Entregado"
+        ],
+        "total_pedido": 339.98
+
+    }
+}

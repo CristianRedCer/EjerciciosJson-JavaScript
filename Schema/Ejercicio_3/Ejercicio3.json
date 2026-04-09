@@ -1,0 +1,19 @@
+{
+  "$schema": "Ejercicio3.schema.json",
+  "mueble": "sinfonier",
+  "tipoMadera": "caoba",
+  "medidas": {
+    "ancho": {
+      "numero": 20,
+      "unidad": "cm"
+    },
+    "alto": {
+      "numero": 10,
+      "unidad": "cm"
+    },
+    "profundidad": {
+      "numero": 12,
+      "unidad": "cm"
+    }
+  }
+}
