@@ -33,12 +33,20 @@
         "asignaturas": {
           "type": "array",
           "description": "Asignaturas del profesor",
-          "items": {
-            "type": "string"
-          },
           "minItems": 1,
+          "maxItems": 5,
           "uniqueItems": true,
-          "maxItems": 5
+          "items": {
+            "type": "object",
+            "properties": {
+              "asignatura": {
+                "type": "string",
+                "description": "Asignatura del profesor"
+              }
+            },
+            "required": ["asignatura"],
+            "additionalProperties": false
+          }
         }
       },
       "required": ["departamento", "asignaturas"],

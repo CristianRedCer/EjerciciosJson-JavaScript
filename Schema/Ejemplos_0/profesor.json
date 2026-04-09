@@ -6,6 +6,9 @@
   },
   "datosprofesionales": {
     "departamento": "Informática",
-    "asignaturas": ["LMS", "AWS", "SOST"]
-  }
-}
+    "asignaturas": [
+        {"asignatura": "LMS"},
+        {"asignatura": "AWS"},
+        { "asignatura": "SOST"}
+    ]
+}}
