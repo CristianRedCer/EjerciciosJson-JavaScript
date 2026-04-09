@@ -4,56 +4,49 @@
   "description": "Este es el primer ejemplo para un objeto profesor en el curso de DAM",
   "type": "object",
   "properties": {
-    "nombre": {
-      "type": "string",
-      "description": "Nombre del profesor"
-    },
-    "edad": {
-      "type": "integer",
-      "description": "Edad del profesor",
-      "minimum": 18,
-      "maximum": 70
-    },
-    "departamento": {
-      "type": "string",
-      "description": "Departamento al que pertenece el profesor"
-    },
-    "asignaturas": {
-      "type": "array",
-      "description": "Asignaturas del profesor",
-      "items": {
-        "type": "string"
-      },
-      "minItems": 1,
-      "uniqueItems": true,
-      "maxItems": 5
-    },
-    "alumnos": {
-      "type": "array",
-      "description": "Alumnos que tiene el profesor",
-      "items": {
-        "type": "object",
-        "properties": {
-          "nombre": {
-            "type": "string",
-            "description": "Nombre del alumno"
-          },
-          "edad": {
-            "type": "integer",
-            "description": "Edad del alumno",
-            "minimum": 10,
-            "maximum": 90
-          }
+    "datospersonales": {
+      "type": "object",
+      "description": "Datos personales del profesor",
+      "properties": {
+        "nombre": {
+          "type": "string",
+          "description": "Nombre del profesor"
         },
-        "required": ["nombre", "edad"]
+        "edad": {
+          "type": "integer",
+          "description": "Edad del profesor",
+          "minimum": 15,
+          "maximum": 75
+        }
       },
-      "minItems": 0,
-      "uniqueItems": true,
-      "maxItems": 100
+      "required": ["nombre", "edad"],
+      "additionalProperties": false
+    },
+    "datosprofesionales": {
+      "type": "object",
+      "description": "Datos profesionales del profesor",
+      "properties": {
+        "departamento": {
+          "type": "string",
+          "description": "Departamento al que pertenece el profesor"
+        },
+        "asignaturas": {
+          "type": "array",
+          "description": "Asignaturas del profesor",
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1,
+          "uniqueItems": true,
+          "maxItems": 5
+        }
+      },
+      "required": ["departamento", "asignaturas"],
+      "additionalProperties": false
     }
   },
-  "required": ["nombre", "departamento", "asignaturas"],
+  "required": ["datospersonales", "datosprofesionales"],
   "additionalProperties": {
-    "^\\$":{}
+    "^\\$": {}
   }
 }
