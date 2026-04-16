@@ -135,6 +135,7 @@
 
   "additionalProperties": false,
   "patternProperties": {
-    ""
+    "^\\$": {
+    }
   }
 }
