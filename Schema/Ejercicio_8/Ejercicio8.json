@@ -1,0 +1,23 @@
+{
+    "$schema": "Ejercicio8.schema.json",
+    "biblioteca": [
+        {
+            "titulo": "Harry Potter",
+            "autor": "J.K. Rowling",
+            "isbn": "978-043-970-818-0",
+            "tipo": "novela"
+        },
+        {
+            "titulo": "El arte de la guerra",
+            "autor": "Sun Tzu",
+            "isbn": "9781599869773",
+            "tipo": "ensayo"
+        },
+        {
+            "titulo": "Steve Jobs",
+            "autor": "Walter Isaacson",
+            "isbn": "9781451648539",
+            "tipo": "biografía"
+        }
+    ]
+}

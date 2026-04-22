@@ -1,0 +1,34 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "title": "Ejercicio 8",
+    "description": "Cuarto ejercicio de schemas con patrones",
+    "type": "object",
+    "properties": {
+      "biblioteca": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "titulo": {
+              "type": "string"
+            },
+            "autor": {
+              "type": "string"
+            },
+            "isbn": {
+              "type": "string",
+              "pattern": "^(?:97[89])[- ]?\\d{1,5}[- ]?\\d{1,7}[- ]?\\d{1,7}[- ]?\\d{1}$"
+            },
+            "tipo": {
+              "type": "string",
+              "enum": ["novela", "ensayo", "biografía"]
+            }
+          },
+          "required": ["titulo", "autor", "isbn", "tipo"],
+          "additionalProperties": false,
+          "minimum": 1,
+          "maximum": 500
+        }
+      }
+    }
+}
