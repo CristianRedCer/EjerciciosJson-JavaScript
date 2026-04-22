@@ -1,0 +1,90 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Ejercicio 5",
+  "description": "Primer ejercicio de schemas con patrones.",
+
+  "type": "object",
+  "properties": {
+    "persona": {
+      "description": "Objeto que representa a una persona",
+      "type": "object",
+      "properties": {
+        "nacimiento": {
+          "description": "Fecha de nacimiento de la persona",
+          "type": "string",
+          "format": "date"
+        },
+        "datos": {
+          "description": "Datos personales de la persona",
+          "type": "object",
+          "properties": {
+            "nombre": {
+              "description": "Nombre de la persona",
+              "type": "object",
+              "properties": {
+                "tratamiento": {
+                  "description": "Tratamiento de la persona (Sr, Sra, etc.)",
+                  "type": "string",
+                  "enum": ["Sr", "Sra", "Dr", "Dra"]
+                },
+                "valor": {
+                  "description": "Valor del nombre de la persona",
+                  "type": "string"
+                }
+              },
+              "required": ["tratamiento", "valor"],
+              "additionalProperties": false
+            },
+            "apellidos": {
+              "description": "Apellidos de la persona",
+              "type": "object",
+              "properties": {
+                "numeroApellidos": {
+                  "description": "Número de apellidos de la persona",
+                  "type": "integer",
+                  "minimum": 1,
+                  "maximum": 3
+                },
+                "valor": {
+                  "description": "Valor de los apellidos de la persona",
+                  "type": "string"
+                }
+              },
+              "required": ["numeroApellidos", "valor"],
+              "additionalProperties": false
+            },
+            "dni": {
+              "description": "DNI de la persona",
+              "type": "object",
+              "properties": {
+                "letra": {
+                  "description": "Letra del DNI de la persona",
+                  "type": "string",
+                  "pattern": "^[A-Z]|[a-z]$"
+                },
+                "valor": {
+                  "description": "Valor numérico del DNI de la persona",
+                  "type": "string",
+                  "pattern": "^[0-9]{8}$"
+                }
+              },
+              "required": ["letra", "valor"],
+              "additionalProperties": false
+            }
+          },
+          "additionalProperties": false
+        },
+        "comentario": {
+          "description": "Comentario sobre la persona",
+          "type": "string"
+        }
+      },
+      "required": ["nacimiento", "datos", "comentario"],
+      "additionalProperties": false
+    },
+    "additionalProperties": false,
+    "patternProperties": {
+      "^\\$": {}
+    }
+  }
+}

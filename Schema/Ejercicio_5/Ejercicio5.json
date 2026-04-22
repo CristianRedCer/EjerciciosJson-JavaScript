@@ -1,0 +1,21 @@
+{
+  "$schema": "Ejercicio5.schema.json",
+  "persona": {
+    "nacimiento": "1990-10-20",
+    "datos": {
+      "nombre": {
+        "tratamiento": "Sr",
+        "valor": "Pepe"
+      },
+      "apellidos": {
+        "numeroApellidos": 1,
+        "valor": "Garcia"
+      },
+      "dni": {
+        "letra": "B",
+        "valor": "99999999"
+      }
+    },
+    "comentario": "buena gente. . ."
+  }
+}

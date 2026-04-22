@@ -1,0 +1,100 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Ejercicio 6",
+  "description": "Segundo ejercicio de schemas con patrones",
+  "type": "array",
+  "items": {
+    "item": {
+      "type": "object",
+      "properties": {
+        "para": {
+          "description": "Objeto que representa al destinatario del mensaje",
+          "type": "object",
+          "properties": {
+            "correo": {
+              "description": "Correo electrónico del destinatario",
+              "type": "string",
+              "format": "email"
+            },
+            "nombre completo": {
+              "description": "Nombre completo del destinatario",
+              "type": "string"
+            }
+          },
+          "required": ["correo", "nombre completo"]
+        },
+        "de": {
+          "description": "Objeto que representa al remitente del mensaje",
+          "type": "object",
+          "properties": {
+            "correo": {
+              "description": "Correo electrónico del remitente",
+              "type": "string",
+              "format": "email"
+            },
+            "valor": {
+              "description": "Nombre completo del remitente",
+              "type": "string"
+            }
+          },
+          "required": ["correo", "valor"]
+        },
+        "titulo": {
+          "description": "Título del mensaje",
+          "type": "string"
+        },
+        "contenido": {
+          "description": "Contenido del mensaje",
+          "type": "string"
+        }
+      },
+      "required": ["para", "de", "titulo", "contenido"]
+    },
+    "item2": {
+      "type": "object",
+      "properties": {
+        "para": {
+          "description": "Objeto que representa al destinatario del mensaje",
+          "type": "object",
+          "properties": {
+            "correo": {
+              "description": "Correo electrónico del destinatario",
+              "type": "string",
+              "format": "email"
+            },
+            "nombre completo": {
+              "description": "Nombre completo del destinatario",
+              "type": "string"
+            }
+          },
+          "required": ["correo", "nombre completo"]
+        },
+        "de": {
+          "description": "Objeto que representa al remitente del mensaje",
+          "type": "object",
+          "properties": {
+            "correo": {
+              "description": "Correo electrónico del remitente",
+              "type": "string",
+              "format": "email"
+            },
+            "valor": {
+              "description": "Nombre completo del remitente",
+              "type": "string"
+            }
+          },
+          "required": ["correo", "valor"]
+        },
+        "titulo": {
+          "description": "Título del mensaje",
+          "type": "string"
+        },
+        "contenido": {
+          "description": "Contenido del mensaje",
+          "type": "string"
+        }
+      },
+      "required": ["para", "de", "titulo", "contenido"]
+    }
+  }
+}

@@ -1,0 +1,29 @@
+[
+  {
+    "$schema": "Ejercicio6.schema.json",
+    "para": {
+      "correo": "pedro@gmail.com",
+      "nombre completo": "Pedro González Pérez"
+    },
+    "de": {
+      "correo": "lauraperez@gmail.com",
+      "valor": "Laura Gómez López"
+    },
+    "titulo": "Recordatorio",
+    "contenido": "A las 7:00 pm en la puerta del teatro"
+  },
+  {
+    "dia": "23/01/2010",
+    "hora": "13:15",
+    "para": {
+      "correo": "miguel@gmail.com",
+      "nombre completo": "Miguel Reverendo"
+    },
+    "de": {
+      "correo": "juan@gmail.com",
+      "nombre completo": "Juan Pérez Palómez"
+    },
+    "titulo": "Informes",
+    "contenido": "Te he dejado los informes en el casillero"
+  }
+]
