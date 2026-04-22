@@ -81,10 +81,10 @@
       },
       "required": ["nacimiento", "datos", "comentario"],
       "additionalProperties": false
-    },
-    "additionalProperties": false,
-    "patternProperties": {
-      "^\\$": {}
     }
+  },
+  "additionalProperties": false,
+  "patternProperties": {
+    "^\\$": {}
   }
 }

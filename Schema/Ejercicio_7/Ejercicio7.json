@@ -1,0 +1,17 @@
+{
+    "$schema": "Ejercicio7.schema.json",
+    "patrones":{
+        "numetoBinario":"0",
+        "numeroOctal":"7",
+        "numeroHexadecimal":"A",
+        "sitemasOperativo":"Linux",
+        "codigoDeBarras":"1-123456-789012",
+        "direccionMemoria":"0xA1234567",
+        "direccionMAC":"00:1A:2B:3C:4D:5E",
+        "ipv6":{
+            "prefijo":"2001:0db8:85a3",
+            "id_subred":"abcd",
+            "id_interfaz":"2001:0db8:85a3"
+        }
+    }
+}
