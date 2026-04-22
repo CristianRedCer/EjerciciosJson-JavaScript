@@ -1,34 +1,90 @@
 {
-    "$schema": "https://json-schema.org/draft/2020-12/schema",
-    "title": "Ejercicio 8",
-    "description": "Cuarto ejercicio de schemas con patrones",
-    "type": "object",
-    "properties": {
-      "biblioteca": {
-        "type": "array",
-        "items": {
-          "type": "object",
-          "properties": {
-            "titulo": {
-              "type": "string"
-            },
-            "autor": {
-              "type": "string"
-            },
-            "isbn": {
-              "type": "string",
-              "pattern": "^(?:97[89])[- ]?\\d{1,5}[- ]?\\d{1,7}[- ]?\\d{1,7}[- ]?\\d{1}$"
-            },
-            "tipo": {
-              "type": "string",
-              "enum": ["novela", "ensayo", "biografía"]
-            }
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Ejercicio 8",
+  "description": "Cuarto ejercicio de schemas con patrones",
+  "type": "object",
+  "properties": {
+    "libros": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "titulo": {
+            "type": "string"
           },
-          "required": ["titulo", "autor", "isbn", "tipo"],
-          "additionalProperties": false,
-          "minimum": 1,
-          "maximum": 500
-        }
+          "autores": {
+            "type": "object",
+            "properties": {
+              "nombre": {
+                "type": "string"
+              },
+              "apellidos": {
+                "type": "string"
+              },
+              "nacionalidad": {
+                "type": "string"
+              }
+            },
+            "required": ["nombre", "apellidos"],
+            "additionalProperties": false,
+            "minimum": 1
+          },
+          "editor": {
+            "type": "object",
+            "properties": {
+              "nombre": {
+                "type": "string"
+              },
+              "apellidos": {
+                "type": "string"
+              },
+              "nacionalidad": {
+                "type": "string"
+              }
+            },
+            "required": ["nombre", "apellidos"],
+            "additionalProperties": false,
+            "minimum": 1,
+            "maximum": 1
+          },
+          "isbn": {
+            "type": "string",
+            "pattern": "^([0-9]{3}-){4}[0-9]{1}$"
+          },
+          "tipo": {
+            "type": "string",
+            "enum": ["novela", "ensayo", "biografía"]
+          },
+
+          "categoria": {
+            "type": "string",
+            "enum": ["prestamo", "consulta"]
+          },
+          "numeroDePaginas": {
+            "type": "integer"
+          },
+          "anyodepublicacion": {
+            "type": "string",
+            "pattern": "^[0-9]{4}$"
+          }
+        },
+        "required": [
+          "titulo",
+          "autores",
+          "isbn",
+          "tipo",
+          "categoria",
+          "numeroDePaginas",
+          "anyodepublicacion"
+        ],
+        "additionalProperties": false,
+        "minimum": 1,
+        "maximum": 500
       }
     }
+  },
+  "additionalProperties": false,
+  "patternProperties": {
+    "^\\$": {}
+  }
 }

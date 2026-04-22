@@ -1,23 +1,55 @@
 {
-    "$schema": "Ejercicio8.schema.json",
-    "biblioteca": [
-        {
-            "titulo": "Harry Potter",
-            "autor": "J.K. Rowling",
-            "isbn": "978-043-970-818-0",
-            "tipo": "novela"
-        },
-        {
-            "titulo": "El arte de la guerra",
-            "autor": "Sun Tzu",
-            "isbn": "9781599869773",
-            "tipo": "ensayo"
-        },
-        {
-            "titulo": "Steve Jobs",
-            "autor": "Walter Isaacson",
-            "isbn": "9781451648539",
-            "tipo": "biografía"
-        }
-    ]
+  "$schema": "Ejercicio8.schema.json",
+  "libros": [
+    {
+      "titulo": "Harry Potter y la piedra filosofal",
+      "autores": {
+        "nombre": "J.K.",
+        "apellidos": "Rowling",
+        "nacionalidad": "británica"
+      },
+      "editor": {
+        "nombre": "Maria",
+        "apellidos": "Sanchez",
+        "nacionalidad": "española"
+      },
+      "isbn": "978-043-970-818-0",
+      "tipo": "novela",
+      "categoria": "prestamo",
+      "numeroDePaginas": 768,
+      "anyodepublicacion": "1997"
+    },
+    {
+      "titulo": "El arte de la guerra",
+      "autores": {
+        "nombre": "Sun",
+        "apellidos": "Tzu",
+        "nacionalidad": "china"
+      },
+      "editor": {
+        "nombre": "Juan",
+        "apellidos": "Rodríguez",
+        "nacionalidad": "española"
+      },
+      "isbn": "978-159-986-977-3",
+      "tipo": "ensayo",
+      "categoria": "prestamo",
+      "numeroDePaginas": 128,
+      "anyodepublicacion": "1988"
+    },
+    {
+      "titulo": "Steve Jobs biografía",
+      "autores": { "nombre": "Walter", "apellidos": "Isaacson" },
+      "editor": {
+        "nombre": "Philippe",
+        "apellidos": "Delawarre",
+        "nacionalidad": "española"
+      },
+      "isbn": "978-145-164-853-9",
+      "tipo": "biografía",
+      "categoria": "consulta",
+      "numeroDePaginas": 656,
+      "anyodepublicacion": "2011"
+    }
+  ]
 }
