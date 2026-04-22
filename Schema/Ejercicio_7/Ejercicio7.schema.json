@@ -9,15 +9,15 @@
       "properties": {
         "numetoBinario": {
           "type": "string",
-          "pattern": "^0b[01]+$"
+          "pattern": "^[01]+$"
         },
         "numeroOctal": {
           "type": "string",
-          "pattern": "^0o[0-7]+$"
+          "pattern": "^[0-7]+$"
         },
         "numeroHexadecimal": {
           "type": "string",
-          "pattern": "^0x[0-9a-fA-F]+$"
+          "pattern": "^[0-9a-fA-F]+$"
         },
         "sitemasOperativo": {
           "type": "string",
@@ -40,15 +40,15 @@
           "properties": {
             "prefijo": {
               "type": "string",
-              "pattern": "^([0-9a-fA-F]{1,4}:){7}[0-9a-fA-F]{1,4}$"
+              "format": "^([0-9a-fA-F]{1,4}:){2}[0-9a-fA-F]{1,4}$"
             },
             "id_subred": {
               "type": "string",
-              "pattern": "^([0-9a-fA-F]{1,4}:){7}[0-9a-fA-F]{1,4}$"
+              "format": "hostname"
             },
             "id_interfaz": {
               "type": "string",
-              "pattern": "^([0-9a-fA-F]{1,4}:){7}[0-9a-fA-F]{1,4}$"
+              "pattern": "^([0-9a-fA-F]{1,4}:){2}[0-9a-fA-F]{1,4}"
             }
           },
           "required": ["prefijo", "id_subred", "id_interfaz"],
