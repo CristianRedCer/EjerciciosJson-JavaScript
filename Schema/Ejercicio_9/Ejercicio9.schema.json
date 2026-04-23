@@ -52,8 +52,19 @@
                   "type": "string"
                 },
                 "ranking": {
-                  "type": "string",
-                  "enum": ["ATP", "WTA"]
+                  "type": "object",
+                  "properties": {
+                    "tipo": {
+                      "type": "string",
+                      "enum": ["ATP", "WTA"]
+                    },
+                    "posicion": {
+                      "type": "integer",
+                      "minimum": 1
+                    }
+                  },
+                  "required": ["tipo", "posicion"],
+                  "additionalProperties": false
                 },
                 "clasificado": {
                   "type": "string",

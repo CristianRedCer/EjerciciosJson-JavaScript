@@ -14,13 +14,19 @@
           "nombre": "Novak",
           "apellidos": "Djokovic",
           "nacionalidad": "Serbia",
-          "ranking": "ATP"
+          "ranking": {
+            "tipo": "ATP",
+            "posicion": 4
+          }
         },
         {
           "nombre": "Rafael",
           "apellidos": "Nadal",
           "nacionalidad": "España",
-          "ranking": "ATP",
+          "ranking": {
+            "tipo": "ATP",
+            "posicion": 1
+          },
           "clasificado": "cabeza de serie"
         }
       ],
@@ -39,27 +45,39 @@
           "nombre": "Serena",
           "apellidos": "Williams",
           "nacionalidad": "Estados Unidos",
-          "ranking": "WTA",
+          "ranking": {
+            "tipo": "WTA",
+            "posicion": 1
+          },
           "clasificado": "Wildcard"
         },
         {
           "nombre": "Venus",
           "apellidos": "Williams",
           "nacionalidad": "Estados Unidos",
-          "ranking": "WTA",
+          "ranking": {
+            "tipo": "WTA",
+            "posicion": 3
+          },
           "clasificado": "Wildcard"
         },
         {
           "nombre": "Simona",
           "apellidos": "Halep",
           "nacionalidad": "Rumania",
-          "ranking": "WTA"
+          "ranking": {
+            "tipo": "WTA",
+            "posicion": 2
+          }
         },
         {
           "nombre": "Ashleigh",
           "apellidos": "Barty",
           "nacionalidad": "Australia",
-          "ranking": "WTA"
+          "ranking": {
+            "tipo": "WTA",
+            "posicion": 4
+          }
         }
       ],
       "resultado_final": {
