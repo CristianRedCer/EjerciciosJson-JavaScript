@@ -1,0 +1,106 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Ejercicio 9",
+  "description": "Quinto ejercicio de schemas con patrones",
+  "type": "object",
+  "properties": {
+    "fecha": {
+      "type": "string",
+      "format": "date"
+    },
+    "ubicacion": {
+      "type": "object",
+      "properties": {
+        "ciudad": {
+          "type": "string"
+        },
+        "pais": {
+          "type": "string"
+        }
+      },
+      "required": ["ciudad", "pais"],
+      "additionalProperties": false
+    },
+    "partidos": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 128,
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[WM]-[a-z]{3}-[0-9]{3}$"
+          },
+          "categoria": {
+            "type": "string",
+            "enum": ["individual masculino", "individual femenino", "dobles"]
+          },
+          "jugadores": {
+            "type": "array",
+            "minItems": 2,
+            "maxItems": 4,
+            "items": {
+              "properties": {
+                "nombre": {
+                  "type": "string"
+                },
+                "apellidos": {
+                  "type": "string"
+                },
+                "nacionalidad": {
+                  "type": "string"
+                },
+                "ranking": {
+                  "type": "string",
+                  "enum": ["ATP", "WTA"]
+                },
+                "clasificado": {
+                  "type": "string",
+                  "enum": ["cabeza de serie", "Wildcard"]
+                }
+              },
+              "required": ["nombre", "apellidos", "nacionalidad", "ranking"],
+              "additionalProperties": false
+            }
+          },
+          "resultado_final": {
+            "type": "object",
+            "properties": {
+              "set1": {
+                "type": "string",
+                "pattern": "^[0-7]-[0-7]$"
+              },
+              "set2": {
+                "type": "string",
+                "pattern": "^[0-7]-[0-7]$"
+              },
+              "set3": {
+                "type": "string",
+                "pattern": "^[0-7]-[0-7]$"
+              }
+            },
+            "additionalProperties": false
+          },
+          "tipo": {
+            "type": "string",
+            "enum": [
+              "primera ronda",
+              "octavos",
+              "cuartos",
+              "semifinal",
+              "final"
+            ]
+          }
+        },
+        "required": ["id", "categoria", "jugadores", "resultado_final"],
+        "additionalProperties": false
+      }
+    }
+  },
+  "required": ["fecha", "ubicacion", "partidos"],
+  "additionalProperties": false,
+  "patternProperties": {
+    "^\\$": {}
+  }
+}

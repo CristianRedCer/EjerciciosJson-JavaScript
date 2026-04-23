@@ -1,0 +1,73 @@
+{
+  "$schema": "Ejercicio9.schema.json",
+  "fecha": "2026-04-01",
+  "ubicacion": {
+    "ciudad": "Málaga",
+    "pais": "España"
+  },
+  "partidos": [
+    {
+      "id": "M-abc-123",
+      "categoria": "individual masculino",
+      "jugadores": [
+        {
+          "nombre": "Novak",
+          "apellidos": "Djokovic",
+          "nacionalidad": "Serbia",
+          "ranking": "ATP"
+        },
+        {
+          "nombre": "Rafael",
+          "apellidos": "Nadal",
+          "nacionalidad": "España",
+          "ranking": "ATP",
+          "clasificado": "cabeza de serie"
+        }
+      ],
+      "resultado_final": {
+        "set1": "4-6",
+        "set2": "6-2",
+        "set3": "5-7"
+      },
+      "tipo": "octavos"
+    },
+    {
+      "id": "M-def-456",
+      "categoria": "dobles",
+      "jugadores": [
+        {
+          "nombre": "Serena",
+          "apellidos": "Williams",
+          "nacionalidad": "Estados Unidos",
+          "ranking": "WTA",
+          "clasificado": "Wildcard"
+        },
+        {
+          "nombre": "Venus",
+          "apellidos": "Williams",
+          "nacionalidad": "Estados Unidos",
+          "ranking": "WTA",
+          "clasificado": "Wildcard"
+        },
+        {
+          "nombre": "Simona",
+          "apellidos": "Halep",
+          "nacionalidad": "Rumania",
+          "ranking": "WTA"
+        },
+        {
+          "nombre": "Ashleigh",
+          "apellidos": "Barty",
+          "nacionalidad": "Australia",
+          "ranking": "WTA"
+        }
+      ],
+      "resultado_final": {
+        "set1": "6-3",
+        "set2": "4-6",
+        "set3": "7-5"
+      },
+      "tipo": "semifinal"
+    }
+  ]
+}
