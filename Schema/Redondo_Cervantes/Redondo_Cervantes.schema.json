@@ -1,0 +1,113 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Examen Json Schema",
+  "description": "Ejercicio de examen de Json Schema de DAM",
+  "type": "object",
+  "properties": {
+    "restaurante": {
+      "type": "object",
+      "properties": {
+        "nombre": {
+          "type": "string"
+        },
+        "direccion": {
+          "type": "object",
+          "properties": {
+            "calle": {
+              "type": "string"
+            },
+            "ciudad": {
+              "type": "string"
+            },
+            "CP": {
+              "type": "string",
+              "pattern": "^[0-9]{5}$"
+            }
+          },
+          "required": ["calle", "ciudad"],
+          "additionalProperties": false
+        },
+        "comanda": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "string",
+              "format": "^[A-C]{2}-[0-9]{3}#$"
+            },
+            "num_mesa": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 30
+            },
+            "nombre_Camarero": {
+              "type": "string",
+              "format": "^[A-Za-z]{1-20}$"
+            },
+            "estado": {
+              "type": "string",
+              "enum": ["pendiente", "en preparación", "servida"]
+            },
+            "platos": {
+              "type": "array",
+              "minItems": 1,
+              "maxItems": 10,
+              "items": {
+                "properties": {
+                  "nombre": {
+                    "type": "string"
+                  },
+                  "precio": {
+                    "type": "integer",
+                    "minimum": 0.01
+                  },
+                  "cantidad": {
+                    "type": "integer",
+                    "minimum": 1,
+                    "maximum": 10
+                  },
+                  "extras": {
+                    "type": "array",
+                    "items": {
+                      "properties": {
+                        "extra": {
+                          "type": "string"
+                        }
+                      },
+                      "additionalProperties": false
+                    }
+                  },
+                  "pago": {
+                    "type": "object",
+                    "properties": {
+                      "metodo": {
+                        "type": "string",
+                        "enum": ["efectivo", "tarjeta", "online"]
+                      },
+                      "impote_total": {
+                        "type": "integer"
+                      }
+                    },
+                    "required": ["metodo", "impote_total"],
+                    "additionalProperties": false
+                  }
+                },
+                "required": ["nombre", "precio", "cantidad", "pago"],
+                "additionalProperties": false
+              }
+            }
+          },
+          "required": ["id", "num_mesa", "estado", "platos"],
+          "minimum": 1,
+          "maximum": 50,
+          "additionalProperties": false
+        }
+      },
+      "required": ["nombre", "direccion", "comanda"],
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false,
+  "patternProperties": {
+    "^\\$": {}
+  }
+}

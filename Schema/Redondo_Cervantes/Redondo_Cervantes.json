@@ -1,0 +1,38 @@
+{
+  "$schema": "Redondo_Cervantes.schema.json",
+  "restaurante": {
+    "nombre": "Bar Redondo",
+    "direccion": {
+      "calle": "Gran Bretaña",
+      "ciudad": "Málaga",
+      "CP": "29006"
+    },
+    "comanda": {
+      "id": "AB-123#",
+      "num_mesa": 1,
+      "nombre_Camarero": "Cristian",
+      "estado": "en preparación",
+      "platos": [
+        {
+          "nombre": "croquetas",
+          "cantidad": 2,
+          "precio": 3,
+          "pago": {
+            "metodo": "efectivo",
+            "impote_total": 6
+          }
+        },
+        {
+          "nombre": "Patatas Bravas",
+          "cantidad": 2,
+          "precio": 5,
+          "extras": ["sin salsa"],
+          "pago": {
+            "metodo": "efectivo",
+            "impote_total": 10
+          }
+        }
+      ]
+    }
+  }
+}
